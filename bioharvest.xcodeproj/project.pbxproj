@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04DA60258F66DA3F8906BED9 /* ExportTimeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D88BDB2560B51AEFD6C392 /* ExportTimeout.swift */; };
+		0B735DA9EAFD7397844A4F20 /* HarvestAndTransmitIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F117F7664E428C2A5B0C378 /* HarvestAndTransmitIntent.swift */; };
+		23C6E439F8D497D5410CF28A /* BioharvestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE6A71494A5420425B20164 /* BioharvestApp.swift */; };
+		2D51C4380FFF6B8769753B2E /* ExportPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB909A12F4EFC3DFBB2E2A /* ExportPayload.swift */; };
+		3DC3538B82E473DF99A65B68 /* ExportProgressOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213834612EFB2E55D9C34BC0 /* ExportProgressOverlay.swift */; };
+		3EDFF649344954BC1836D58C /* BioharvestTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC46B45E14877399C988BFA /* BioharvestTheme.swift */; };
+		408C039F9C2D7398679831E7 /* MetricCoverageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C6DD682412C73C5D68021B /* MetricCoverageRow.swift */; };
+		57AC6A75023E7874A3299546 /* ExportJSONEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993B38898BD3940BB7F80CDB /* ExportJSONEncodingTests.swift */; };
+		6B7E532C382166255CEDB756 /* ExportProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C83FA39DAE6AF95F1A7382F /* ExportProgress.swift */; };
+		6B9A4DEC7CB8C4B8CD06F99A /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01E14D27CD9D1D0C04EF3A /* HapticFeedback.swift */; };
+		704614066ABF0C845DADAF1B /* BioharvestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E363B6365F38D26A3074C /* BioharvestViewModel.swift */; };
+		76D8FBC957A74D3A70CA3067 /* ExportReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19BB1B5207124E464693692 /* ExportReportView.swift */; };
+		7C7260EEB0A5CB2E4346B2DD /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42019025E4AA7785B2FD8A94 /* ShareSheet.swift */; };
+		7CA664B3FCF8E904065B2625 /* ExportJSONEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAC9A8690A778ADD94DE1A8 /* ExportJSONEncoding.swift */; };
+		81D531652FC49D909419209C /* MetricInclusionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954E9401E847429803A5C25 /* MetricInclusionTests.swift */; };
+		83CBAFAAEA980A70A6DFB2AB /* ExportWindowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6130F8F89F9F45C2A28FA837 /* ExportWindowTests.swift */; };
+		844C01710AED30C482C09859 /* MetricCoverageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D1699EEC0739BA67556A7 /* MetricCoverageTests.swift */; };
+		944FE4216FB3E29226AD4EFA /* BioharvestHealthKitMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FDA240BB246E9C7CC51869 /* BioharvestHealthKitMath.swift */; };
+		986696028917DFAA8579578A /* CoachHandoff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81828F022D71576104A7D50D /* CoachHandoff.swift */; };
+		A5E603C664F86F57A6C35C10 /* BioharvestHealthKitMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BCE654A14304E62AF812E4 /* BioharvestHealthKitMathTests.swift */; };
+		B1447993E00DA17BE92933E4 /* BioharvestComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748F1DA58F35FF8424741C73 /* BioharvestComponents.swift */; };
+		B1E156C1DC4BCB7C5663F67E /* BioharvestStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27D9F244D6AC50134A8455 /* BioharvestStorage.swift */; };
+		B6936955EBA8E74634E3F04C /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54043DA51A45CE05527557 /* HealthKitManager.swift */; };
+		B915BB78EC0335DC2381B9CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8218037445A784910F5E5B /* ContentView.swift */; };
+		C494FD24B0A8116376E0723A /* WorkoutActivityTypeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7E03AADE0666C1A1DC92E /* WorkoutActivityTypeFormatter.swift */; };
+		CED3E1007D83A90D3BD6B655 /* BioharvestExportPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA451D88818757A9C2EA532A /* BioharvestExportPipeline.swift */; };
+		CF2F01944EC3B7E4FCE9B615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A02BFB1C57C9553BA2A1982 /* Assets.xcassets */; };
+		DDDBC16D06E1CA801D0E315D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 11175B68B131004688CDAF5E /* PrivacyInfo.xcprivacy */; };
+		E889BCD529BAA707D39AF0C3 /* MetricCoverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A803DEF7285CADD0F5C87E92 /* MetricCoverage.swift */; };
+		ED9B2389AE871710EBE6D3A4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52AB38D70B1A75173537BB2 /* SettingsView.swift */; };
+		F084803F05D88EDD239A38C9 /* RoundedDoubleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D0465E3C068FAEE9DF4C3 /* RoundedDoubleTests.swift */; };
+		F62AF4A40ED13AF30E8F2E8D /* ExportWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A12A3ED753225FE3FE8F06 /* ExportWindow.swift */; };
+		F646F5FF02052D919028FBC3 /* WebhookTransmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0068C219AB1A9BEA5D3820 /* WebhookTransmitter.swift */; };
+		F71B2DDA6169D200B59DCACE /* MetricInclusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094C1A761FA6C606BE2D4A38 /* MetricInclusion.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6F3057BCDD5B1F8AB98BE802 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA8AD691061B404447C6CED4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A65B4E07268E9052FC0B5C6D;
+			remoteInfo = bioharvest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		094C1A761FA6C606BE2D4A38 /* MetricInclusion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricInclusion.swift; sourceTree = "<group>"; };
+		0B47989864814F5608DCB76A /* bioharvest.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = bioharvest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11175B68B131004688CDAF5E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		1AAC9A8690A778ADD94DE1A8 /* ExportJSONEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportJSONEncoding.swift; sourceTree = "<group>"; };
+		213834612EFB2E55D9C34BC0 /* ExportProgressOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportProgressOverlay.swift; sourceTree = "<group>"; };
+		2C0068C219AB1A9BEA5D3820 /* WebhookTransmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebhookTransmitter.swift; sourceTree = "<group>"; };
+		2F117F7664E428C2A5B0C378 /* HarvestAndTransmitIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarvestAndTransmitIntent.swift; sourceTree = "<group>"; };
+		42019025E4AA7785B2FD8A94 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		4954E9401E847429803A5C25 /* MetricInclusionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricInclusionTests.swift; sourceTree = "<group>"; };
+		51BCE654A14304E62AF812E4 /* BioharvestHealthKitMathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioharvestHealthKitMathTests.swift; sourceTree = "<group>"; };
+		5F01E14D27CD9D1D0C04EF3A /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		6130F8F89F9F45C2A28FA837 /* ExportWindowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportWindowTests.swift; sourceTree = "<group>"; };
+		66D7E03AADE0666C1A1DC92E /* WorkoutActivityTypeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutActivityTypeFormatter.swift; sourceTree = "<group>"; };
+		6CBB909A12F4EFC3DFBB2E2A /* ExportPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportPayload.swift; sourceTree = "<group>"; };
+		6F2E363B6365F38D26A3074C /* BioharvestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioharvestViewModel.swift; sourceTree = "<group>"; };
+		70C6DD682412C73C5D68021B /* MetricCoverageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCoverageRow.swift; sourceTree = "<group>"; };
+		70D88BDB2560B51AEFD6C392 /* ExportTimeout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportTimeout.swift; sourceTree = "<group>"; };
+		745D0465E3C068FAEE9DF4C3 /* RoundedDoubleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedDoubleTests.swift; sourceTree = "<group>"; };
+		748F1DA58F35FF8424741C73 /* BioharvestComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioharvestComponents.swift; sourceTree = "<group>"; };
+		773263B6C957C3A6E48605C2 /* bioharvestTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = bioharvestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C83FA39DAE6AF95F1A7382F /* ExportProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportProgress.swift; sourceTree = "<group>"; };
+		7D27D9F244D6AC50134A8455 /* BioharvestStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioharvestStorage.swift; sourceTree = "<group>"; };
+		81828F022D71576104A7D50D /* CoachHandoff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachHandoff.swift; sourceTree = "<group>"; };
+		8AC46B45E14877399C988BFA /* BioharvestTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioharvestTheme.swift; sourceTree = "<group>"; };
+		8BDCFEB9023AAFDFAB549979 /* bioharvest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bioharvest.entitlements; sourceTree = "<group>"; };
+		993B38898BD3940BB7F80CDB /* ExportJSONEncodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportJSONEncodingTests.swift; sourceTree = "<group>"; };
+		9A02BFB1C57C9553BA2A1982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F9D1699EEC0739BA67556A7 /* MetricCoverageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCoverageTests.swift; sourceTree = "<group>"; };
+		A3FDA240BB246E9C7CC51869 /* BioharvestHealthKitMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioharvestHealthKitMath.swift; sourceTree = "<group>"; };
+		A803DEF7285CADD0F5C87E92 /* MetricCoverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCoverage.swift; sourceTree = "<group>"; };
+		B7A12A3ED753225FE3FE8F06 /* ExportWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportWindow.swift; sourceTree = "<group>"; };
+		C19BB1B5207124E464693692 /* ExportReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportReportView.swift; sourceTree = "<group>"; };
+		CF54043DA51A45CE05527557 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		DE4C6FE2B72E3CDAF502EFAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F52AB38D70B1A75173537BB2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FA451D88818757A9C2EA532A /* BioharvestExportPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioharvestExportPipeline.swift; sourceTree = "<group>"; };
+		FC8218037445A784910F5E5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FEE6A71494A5420425B20164 /* BioharvestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioharvestApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		02D6A76122EAAB766DB07D47 = {
+			isa = PBXGroup;
+			children = (
+				9449D114569E96E7EB213CFD /* bioharvest */,
+				70649630046BCF7C58F31C06 /* bioharvestTests */,
+				F9E6E6400B02DE5A4F5BC3A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1BF77946407D3E12743C819F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6F2E363B6365F38D26A3074C /* BioharvestViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		24785C3D6767D25B67B5A609 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				2F117F7664E428C2A5B0C378 /* HarvestAndTransmitIntent.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
+		3D2B750E267144678EF1612A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A3FDA240BB246E9C7CC51869 /* BioharvestHealthKitMath.swift */,
+				81828F022D71576104A7D50D /* CoachHandoff.swift */,
+				70D88BDB2560B51AEFD6C392 /* ExportTimeout.swift */,
+				5F01E14D27CD9D1D0C04EF3A /* HapticFeedback.swift */,
+				42019025E4AA7785B2FD8A94 /* ShareSheet.swift */,
+				66D7E03AADE0666C1A1DC92E /* WorkoutActivityTypeFormatter.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		605F06F6BC7D5C12E956ACD3 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				748F1DA58F35FF8424741C73 /* BioharvestComponents.swift */,
+				8AC46B45E14877399C988BFA /* BioharvestTheme.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		70649630046BCF7C58F31C06 /* bioharvestTests */ = {
+			isa = PBXGroup;
+			children = (
+				51BCE654A14304E62AF812E4 /* BioharvestHealthKitMathTests.swift */,
+				993B38898BD3940BB7F80CDB /* ExportJSONEncodingTests.swift */,
+				6130F8F89F9F45C2A28FA837 /* ExportWindowTests.swift */,
+				9F9D1699EEC0739BA67556A7 /* MetricCoverageTests.swift */,
+				4954E9401E847429803A5C25 /* MetricInclusionTests.swift */,
+				745D0465E3C068FAEE9DF4C3 /* RoundedDoubleTests.swift */,
+			);
+			path = bioharvestTests;
+			sourceTree = "<group>";
+		};
+		874A74BF60AA58159F5B1789 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				213834612EFB2E55D9C34BC0 /* ExportProgressOverlay.swift */,
+				C19BB1B5207124E464693692 /* ExportReportView.swift */,
+				70C6DD682412C73C5D68021B /* MetricCoverageRow.swift */,
+				F52AB38D70B1A75173537BB2 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9449D114569E96E7EB213CFD /* bioharvest */ = {
+			isa = PBXGroup;
+			children = (
+				9A02BFB1C57C9553BA2A1982 /* Assets.xcassets */,
+				8BDCFEB9023AAFDFAB549979 /* bioharvest.entitlements */,
+				FEE6A71494A5420425B20164 /* BioharvestApp.swift */,
+				FC8218037445A784910F5E5B /* ContentView.swift */,
+				DE4C6FE2B72E3CDAF502EFAB /* Info.plist */,
+				11175B68B131004688CDAF5E /* PrivacyInfo.xcprivacy */,
+				605F06F6BC7D5C12E956ACD3 /* Design */,
+				24785C3D6767D25B67B5A609 /* Intents */,
+				AB8B84F1E6F70318AF8B4D16 /* Models */,
+				B24C9C17FE26B31126878722 /* Services */,
+				3D2B750E267144678EF1612A /* Utilities */,
+				1BF77946407D3E12743C819F /* ViewModels */,
+				874A74BF60AA58159F5B1789 /* Views */,
+			);
+			path = bioharvest;
+			sourceTree = "<group>";
+		};
+		AB8B84F1E6F70318AF8B4D16 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D27D9F244D6AC50134A8455 /* BioharvestStorage.swift */,
+				1AAC9A8690A778ADD94DE1A8 /* ExportJSONEncoding.swift */,
+				6CBB909A12F4EFC3DFBB2E2A /* ExportPayload.swift */,
+				7C83FA39DAE6AF95F1A7382F /* ExportProgress.swift */,
+				B7A12A3ED753225FE3FE8F06 /* ExportWindow.swift */,
+				A803DEF7285CADD0F5C87E92 /* MetricCoverage.swift */,
+				094C1A761FA6C606BE2D4A38 /* MetricInclusion.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B24C9C17FE26B31126878722 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA451D88818757A9C2EA532A /* BioharvestExportPipeline.swift */,
+				CF54043DA51A45CE05527557 /* HealthKitManager.swift */,
+				2C0068C219AB1A9BEA5D3820 /* WebhookTransmitter.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F9E6E6400B02DE5A4F5BC3A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B47989864814F5608DCB76A /* bioharvest.app */,
+				773263B6C957C3A6E48605C2 /* bioharvestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3577B35323BB0BDF185D1515 /* bioharvestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC752C846CC7D3ACBBCA7AA9 /* Build configuration list for PBXNativeTarget "bioharvestTests" */;
+			buildPhases = (
+				611298BFEEFC06D7A45B7093 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3317F8FDFE9D622EC0CC3761 /* PBXTargetDependency */,
+			);
+			name = bioharvestTests;
+			packageProductDependencies = (
+			);
+			productName = bioharvestTests;
+			productReference = 773263B6C957C3A6E48605C2 /* bioharvestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A65B4E07268E9052FC0B5C6D /* bioharvest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7602DE154B8B9CA5777EB752 /* Build configuration list for PBXNativeTarget "bioharvest" */;
+			buildPhases = (
+				472F81E0505119D90E36DDFD /* Sources */,
+				65506BFEB5FAE2B3769C83FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bioharvest;
+			packageProductDependencies = (
+			);
+			productName = bioharvest;
+			productReference = 0B47989864814F5608DCB76A /* bioharvest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA8AD691061B404447C6CED4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3577B35323BB0BDF185D1515 = {
+						DevelopmentTeam = SXWJBD2V3V;
+						ProvisioningStyle = Automatic;
+					};
+					A65B4E07268E9052FC0B5C6D = {
+						DevelopmentTeam = SXWJBD2V3V;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1E63246D4082685D0C9FB3CF /* Build configuration list for PBXProject "bioharvest" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 02D6A76122EAAB766DB07D47;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F9E6E6400B02DE5A4F5BC3A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A65B4E07268E9052FC0B5C6D /* bioharvest */,
+				3577B35323BB0BDF185D1515 /* bioharvestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65506BFEB5FAE2B3769C83FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF2F01944EC3B7E4FCE9B615 /* Assets.xcassets in Resources */,
+				DDDBC16D06E1CA801D0E315D /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		472F81E0505119D90E36DDFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23C6E439F8D497D5410CF28A /* BioharvestApp.swift in Sources */,
+				B1447993E00DA17BE92933E4 /* BioharvestComponents.swift in Sources */,
+				CED3E1007D83A90D3BD6B655 /* BioharvestExportPipeline.swift in Sources */,
+				944FE4216FB3E29226AD4EFA /* BioharvestHealthKitMath.swift in Sources */,
+				B1E156C1DC4BCB7C5663F67E /* BioharvestStorage.swift in Sources */,
+				3EDFF649344954BC1836D58C /* BioharvestTheme.swift in Sources */,
+				704614066ABF0C845DADAF1B /* BioharvestViewModel.swift in Sources */,
+				986696028917DFAA8579578A /* CoachHandoff.swift in Sources */,
+				B915BB78EC0335DC2381B9CF /* ContentView.swift in Sources */,
+				7CA664B3FCF8E904065B2625 /* ExportJSONEncoding.swift in Sources */,
+				2D51C4380FFF6B8769753B2E /* ExportPayload.swift in Sources */,
+				6B7E532C382166255CEDB756 /* ExportProgress.swift in Sources */,
+				3DC3538B82E473DF99A65B68 /* ExportProgressOverlay.swift in Sources */,
+				76D8FBC957A74D3A70CA3067 /* ExportReportView.swift in Sources */,
+				04DA60258F66DA3F8906BED9 /* ExportTimeout.swift in Sources */,
+				F62AF4A40ED13AF30E8F2E8D /* ExportWindow.swift in Sources */,
+				6B9A4DEC7CB8C4B8CD06F99A /* HapticFeedback.swift in Sources */,
+				0B735DA9EAFD7397844A4F20 /* HarvestAndTransmitIntent.swift in Sources */,
+				B6936955EBA8E74634E3F04C /* HealthKitManager.swift in Sources */,
+				E889BCD529BAA707D39AF0C3 /* MetricCoverage.swift in Sources */,
+				408C039F9C2D7398679831E7 /* MetricCoverageRow.swift in Sources */,
+				F71B2DDA6169D200B59DCACE /* MetricInclusion.swift in Sources */,
+				ED9B2389AE871710EBE6D3A4 /* SettingsView.swift in Sources */,
+				7C7260EEB0A5CB2E4346B2DD /* ShareSheet.swift in Sources */,
+				F646F5FF02052D919028FBC3 /* WebhookTransmitter.swift in Sources */,
+				C494FD24B0A8116376E0723A /* WorkoutActivityTypeFormatter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		611298BFEEFC06D7A45B7093 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E603C664F86F57A6C35C10 /* BioharvestHealthKitMathTests.swift in Sources */,
+				57AC6A75023E7874A3299546 /* ExportJSONEncodingTests.swift in Sources */,
+				83CBAFAAEA980A70A6DFB2AB /* ExportWindowTests.swift in Sources */,
+				844C01710AED30C482C09859 /* MetricCoverageTests.swift in Sources */,
+				81D531652FC49D909419209C /* MetricInclusionTests.swift in Sources */,
+				F084803F05D88EDD239A38C9 /* RoundedDoubleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3317F8FDFE9D622EC0CC3761 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A65B4E07268E9052FC0B5C6D /* bioharvest */;
+			targetProxy = 6F3057BCDD5B1F8AB98BE802 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0374AA64DB6ABE309110F4B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = bioharvest/bioharvest.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = bioharvest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameronro.bioharvest;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0557C667D3059272A7F54B8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = SXWJBD2V3V;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		638C741EF379552155E43909 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = bioharvest/bioharvest.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = bioharvest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameronro.bioharvest;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9D6B92E863878E24DA819B43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = SXWJBD2V3V;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D23D8CB7383DE152CD373F81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameronro.bioharvestTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bioharvest.app/bioharvest";
+			};
+			name = Release;
+		};
+		F012A82D590581B51CEF647A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cameronro.bioharvestTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bioharvest.app/bioharvest";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E63246D4082685D0C9FB3CF /* Build configuration list for PBXProject "bioharvest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0557C667D3059272A7F54B8A /* Debug */,
+				9D6B92E863878E24DA819B43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7602DE154B8B9CA5777EB752 /* Build configuration list for PBXNativeTarget "bioharvest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0374AA64DB6ABE309110F4B5 /* Debug */,
+				638C741EF379552155E43909 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CC752C846CC7D3ACBBCA7AA9 /* Build configuration list for PBXNativeTarget "bioharvestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F012A82D590581B51CEF647A /* Debug */,
+				D23D8CB7383DE152CD373F81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA8AD691061B404447C6CED4 /* Project object */;
+}

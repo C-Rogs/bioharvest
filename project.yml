@@ -1,0 +1,38 @@
+name: bioharvest
+options:
+  bundleIdPrefix: com.cameronro
+  deploymentTarget:
+    iOS: "18.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: SXWJBD2V3V
+    CODE_SIGN_STYLE: Automatic
+targets:
+  bioharvest:
+    type: application
+    platform: iOS
+    sources:
+      - path: bioharvest
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.cameronro.bioharvest
+        INFOPLIST_FILE: bioharvest/Info.plist
+        CODE_SIGN_ENTITLEMENTS: bioharvest/bioharvest.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: NO
+        TARGETED_DEVICE_FAMILY: "1"
+  bioharvestTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: bioharvestTests
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.cameronro.bioharvestTests
+    dependencies:
+      - target: bioharvest
