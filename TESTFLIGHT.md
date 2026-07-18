@@ -39,6 +39,22 @@ Takes about 5 minutes. No App Store Connect wait.
 
 Use after direct install works. Adds 15-30 min Apple processing.
 
+### Automated upload (recommended)
+
+```bash
+cd /Users/cameronro/Development/bioharvest
+
+# First time only: create App Store Connect app record (interactive Apple ID login)
+./scripts/create-asc-app.sh
+
+# Archive + upload (or export only if archive already exists)
+./scripts/testflight.sh archive export
+```
+
+`ITSAppUsesNonExemptEncryption` is set to `false` in `Info.plist` (standard HTTPS only).
+
+### Manual setup (if scripts fail)
+
 1. **Apple Developer Program** ($99/year) required for TestFlight external testers; internal testing works with paid membership.
 
 2. **App Store Connect**
@@ -46,11 +62,15 @@ Use after direct install works. Adds 15-30 min Apple processing.
    - Name: bioharvest
    - Bundle ID: match Xcode (`com.cameronro.bioharvest`)
    - SKU: `bioharvest`
+   - Primary language: English
+   - Category: Health & Fitness
 
 3. **Archive**
    - Xcode device menu: **Any iOS Device (arm64)**
    - Product → Archive
    - Organizer opens → **Distribute App** → App Store Connect → Upload
+
+   Or from Terminal: `./scripts/testflight.sh archive export`
 
 4. **TestFlight tab** in App Store Connect
    - Wait for build processing
