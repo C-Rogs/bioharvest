@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSHealthShareUsageDescription</key>
 	<string>bioharvest reads your heart rate, HRV, sleep, workouts, activity, and nutrition data (water and alcohol) to build a daily export for your health coach.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>bioharvest does not write health data.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
