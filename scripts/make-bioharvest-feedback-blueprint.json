@@ -1,0 +1,49 @@
+{
+  "name": "bioharvest feedback → email",
+  "flow": [
+    {
+      "id": 1,
+      "module": "gateway:CustomWebHook",
+      "version": 1,
+      "parameters": {},
+      "mapper": {},
+      "metadata": {
+        "designer": { "x": 0, "y": 0, "name": "bioharvest webhook" }
+      }
+    },
+    {
+      "id": 2,
+      "module": "google-email:ActionSendEmail",
+      "version": 2,
+      "parameters": {},
+      "mapper": {
+        "cc": [],
+        "to": ["cameronfoxrogers@gmail.com"],
+        "bcc": [],
+        "from": "",
+        "html": "<p><strong>Usage note</strong></p><p>{{1.note}}</p><hr><p><strong>App version:</strong> {{1.app_version}} (build {{1.build}})<br><strong>iOS:</strong> {{1.ios}}<br><strong>Device:</strong> {{1.device}}<br><strong>Timestamp:</strong> {{1.timestamp}}</p>",
+        "subject": "bioharvest feedback",
+        "attachments": []
+      },
+      "metadata": {
+        "designer": { "x": 300, "y": 0, "name": "Send feedback email" }
+      }
+    }
+  ],
+  "metadata": {
+    "instant": true,
+    "version": 1,
+    "scenario": {
+      "roundtrips": 1,
+      "maxErrors": 3,
+      "autoCommit": true,
+      "autoCommitTriggerLast": true,
+      "sequential": false,
+      "confidential": false,
+      "dataloss": false,
+      "dlq": false,
+      "freshVariables": false
+    },
+    "designer": { "orphans": [] }
+  }
+}

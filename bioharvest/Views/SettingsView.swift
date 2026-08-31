@@ -2,6 +2,15 @@ import SwiftUI
 
 struct SettingsView: View {
     @AppStorage(BioharvestStorage.webhookURLKey) private var webhookURL: String = ""
+    @State private var feedbackNote = ""
+    @State private var isSendingFeedback = false
+    @State private var feedbackAlert: FeedbackAlert?
+
+    private struct FeedbackAlert: Identifiable {
+        let id = UUID()
+        let title: String
+        let message: String
+    }
 
     private var isWebhookValid: Bool {
         let trimmed = webhookURL.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -39,6 +48,29 @@ struct SettingsView: View {
                     .foregroundStyle(.secondary)
                 }
 
+                BioharvestCard(title: "Usage Notes", icon: "text.bubble", accent: BioharvestTheme.duskTeal) {
+                    TextField(
+                        "What’s working, what’s confusing, what you’d change…",
+                        text: $feedbackNote,
+                        axis: .vertical
+                    )
+                    .lineLimit(4 ... 8)
+                    .padding(12)
+                    .background(Color(.tertiarySystemFill), in: RoundedRectangle(cornerRadius: 10))
+
+                    BioharvestPrimaryButton(
+                        title: isSendingFeedback ? "Sending…" : "Send to developer",
+                        icon: "paperplane.fill",
+                        isDisabled: feedbackNote.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || isSendingFeedback
+                    ) {
+                        sendFeedback()
+                    }
+
+                    Text("Optional. Sends only what you type plus app version and device model. No health data.")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
                 BioharvestCard(title: "About", icon: "info.circle", accent: BioharvestTheme.harvestGreen) {
                     VStack(alignment: .leading, spacing: 10) {
                         aboutRow(icon: "leaf.fill", title: "bioharvest", subtitle: "Health data exporter for Coach")
@@ -54,6 +86,40 @@ struct SettingsView: View {
         .background(Color(.systemGroupedBackground))
         .navigationTitle("Settings")
         .navigationBarTitleDisplayMode(.large)
+        .alert(item: $feedbackAlert) { alert in
+            Alert(
+                title: Text(alert.title),
+                message: Text(alert.message),
+                dismissButton: .default(Text("OK"))
+            )
+        }
+    }
+
+    private func sendFeedback() {
+        isSendingFeedback = true
+        HapticFeedback.lightTap()
+
+        Task {
+            let result = await FeedbackTransmitter.send(note: feedbackNote)
+            await MainActor.run {
+                isSendingFeedback = false
+                switch result {
+                case .success:
+                    HapticFeedback.success()
+                    feedbackNote = ""
+                    feedbackAlert = FeedbackAlert(
+                        title: "Sent",
+                        message: "Thanks, your note was sent."
+                    )
+                case .failure(let error):
+                    HapticFeedback.error()
+                    feedbackAlert = FeedbackAlert(
+                        title: "Couldn’t Send",
+                        message: error.localizedDescription
+                    )
+                }
+            }
+        }
     }
 
     private var settingsHero: some View {
