@@ -1,44 +1,38 @@
 # bioharvest
 
-iOS app that harvests Apple Health data (HRV, resting heart rate, sleep, activity, nutrition, and more) and exports schema v2 JSON for Coach.
+iPhone app that reads Apple Health for a date window and writes schema v2 JSON. Share the file to Coach on the same phone, or copy it. Helm can import the same payload.
 
-## Quick start (fastest test on your phone)
+The app's job is the dump. Coaching is Coach or Helm.
 
-1. Open `bioharvest.xcodeproj` in Xcode
-2. Plug in your iPhone (USB), unlock it
-3. Select the **bioharvest** target → **Signing & Capabilities** → choose your **Team**
-4. Select your iPhone in the device dropdown (top bar)
-5. Press **Run** (⌘R)
-6. On iPhone: allow Health permissions when prompted
-7. Set the export window → **Generate JSON & Share** → pick **Coach** from the share sheet
+Live source: [github.com/C-Rogs/bioharvest](https://github.com/C-Rogs/bioharvest)
 
-## Daily workflow
+## How to use it
 
-1. Open bioharvest
-2. Set the **Export Window** (start/end dates)
-3. Optionally adjust **Metric Visibility** toggles to include or exclude HealthKit fields
-4. Tap **Generate JSON & Share**
-5. Choose **Coach** from the share sheet (primary path)
+1. Open `bioharvest.xcodeproj` in Xcode. Select your team, plug in an iPhone, Run.
+2. Allow Health. Missing samples stay JSON `null`. They are not written as 0.
+3. Set the export window. Turn metrics off if you want a thinner file.
+4. **Generate JSON & Share**, then pick **Coach**.
+5. Fallback: Copy JSON and paste.
 
-**Fallback:** after export, use **Copy JSON** under Transmit and paste into Coach manually.
+iOS 18+. An Apple Watch is how HRV and sleep usually exist. Direct-install and TestFlight steps are in [`TESTFLIGHT.md`](TESTFLIGHT.md).
 
-Coach is a separate app (iOS 26+, install from the Coach repo). Both apps must be on the same device for Share handoff.
+Coach must be installed on the same device for the share-sheet handoff. Paste still works without it.
 
-## Requirements
+## Precedent
 
-- iPhone with iOS 18+
-- Apple Watch recommended for HRV and sleep data
-- Apple Developer account (free works for personal device install)
-- **Coach** app (iOS 26+) for Share import; paste/file import works without Share
+Health.app's export is a zip of XML aimed at researchers and lawyers. A coaching prompt wants a dated log: resting HR, HRV (SDNN), sleep stages, intake, activity, body composition. Keys stay in the file when the sample is missing so a consumer can tell "no data" from "zero bpm."
 
-See [TESTFLIGHT.md](TESTFLIGHT.md) for TestFlight distribution.
+That file was the glue between Apple Health and a Gemini thread. Helm now ingests HealthKit itself. bioharvest remains the portable dump: Coach, a paste into a model, a webhook, another device.
 
-## Share → Coach verification
+## Building blocks
 
-With Coach installed on the same device:
+- HealthKit read. No write-through into Health.
+- `ExportPayload.currentSchemaVersion` is 2. `app` is `bioharvest`. `purpose` is `time_series_coach_export`.
+- Share writes `latest_export.json` into App Group `group.com.cameronro.coach` and opens `coach://import/latest`.
+- Settings can POST the same bytes to a webhook. Share is the path that matches how Coach loads context.
 
-1. bioharvest → **Generate JSON & Share**
-2. Share sheet → **Coach**
-3. Coach opens and loads context without paste
-
-If Coach is missing from the share sheet, confirm Coach is installed and retry. The export should appear as **bioharvest coach export** with a `Bioharvest_Export_*.json` filename.
+```bash
+# only if you edited project.yml
+xcodegen generate
+open bioharvest.xcodeproj
+```
